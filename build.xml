@@ -6,10 +6,12 @@
 
 	<target name="clean">
 		<echo message="clean" />
+		<delete dir="${basedir}/build" />
 	</target>
 
 	<target name="prepare">
 		<echo message="prepare" />
+		<mkdir dir="${basedir}/build" />
 	</target>
 
 </project>
