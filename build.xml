@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Signed Sealed Remembered" basedir=".">
+
+	<target name="build" description="Builds the package" depends="clean, prepare">
+	</target>
+
+	<target name="clean">
+		<echo message="clean" />
+	</target>
+
+	<target name="prepare">
+		<echo message="prepare" />
+	</target>
+
+</project>
