@@ -1,0 +1,1 @@
+Signed Sealed Remembered is a mobile app that allows you to pre-set dates or events to send out tangible letters/cards to friends, family, etc [snail mail]. This app allows you to select from categories, create custom messages or use default/generic messages and archive the dates so that you can remember them in the future.
