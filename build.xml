@@ -15,13 +15,19 @@
 		<mkdir dir="${basedir}/build/logs" />
 	</target>
 
-	<target name="behat" description="Run system tests with behat except those requiring javascript interaction." depends="prepare">
-		<exec dir="${basedir}" executable="${basedir}/bin/behat" failonerror="true">
-			<arg value="--tags=~@javascript" />
-			<arg value="--config=${basedir}/build-deploy/behat.yml" />
-			<arg value="--format=html,progress" />
-			<arg value="--out=build/logs/behat.html," />
-		</exec>
+	<target name="start_server" description="This is a test to start the php server">
+		<echo message="the server test is being recognized" />
+			 <exec dir="${basedir}/public" executable="php">
+        		<arg value="-S=localhost:8000" />
+			</exec>
 	</target>
 
+	<target name="behat" description="Run system tests with behat except those requiring javascript interaction." depends="prepare">
+			<exec dir="${basedir}" executable="${basedir}/bin/behat" failonerror="true">
+				<arg value="--tags=~@javascript" />
+				<arg value="--config=${basedir}/build-deploy/behat.yml" />
+				<arg value="--format=html,progress" />
+				<arg value="--out=build/logs/behat.html," />
+			</exec>
+	</target>
 </project>
